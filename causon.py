@@ -44,6 +44,9 @@ def play(number_of_characters):
     lives = MAX_HEALTH
     score = MIN_SCORE
     while lives > 0:
+        system("cls")
+        print(f"Lives: {lives}")
+        print(f"Score: {score}")
         if run_round(characters_list, number_of_characters):
             score += 1
         else:
@@ -61,7 +64,6 @@ def display_get_guess(characters_list):
         return UNSET_OPTION
 
 def run_round(characters_list, number_of_characters):
-    system("cls")
     print("Pick who will show up!")
     character_index = random.randrange(len(characters_list))
     character = characters_list[character_index]
