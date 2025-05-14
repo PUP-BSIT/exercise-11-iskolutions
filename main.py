@@ -14,7 +14,7 @@ def display_get_choice():
     print("2. Emoji (Emotion Identifier) - Franco")
     print("3. PyJokes (Chatbot) - Efondo")
     print("4. PyCountry (Country Explorer) - Lopez")
-    print("5. ")
+    print("5. CountryInfo (Country Info Bot) - Gagtan")
     print("6. Exit")
     print("========================================")
     
@@ -38,6 +38,7 @@ def process_choice(choice):
         case 4:
             lopez.country_explorer()
         case 5:
+            gagtan.country_info_bot()
             pass
         case 6:
             pass
