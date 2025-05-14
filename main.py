@@ -1,4 +1,5 @@
 from os import system
+import causon
 
 UNSET_OPTION = -1
 EXIT_OPTION = 6
@@ -25,7 +26,7 @@ def display_get_choice():
 def process_choice(choice):
     match choice:
         case 1:
-            pass
+            causon.start()
         case 2:
             pass
         case 3:
