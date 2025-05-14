@@ -4,9 +4,9 @@ from os import system
 
 UNSET_OPTION = -1
 EXIT_OPTION = 4
-EASY_ENEMY_COUNT = 5
-AVERAGE_ENEMY_COUNT = 10
-HARD_ENEMY_COUNT = 15
+EASY_CHARACTER_COUNT = 5
+AVERAGE_CHARACTER_COUNT = 10
+HARD_CHARACTER_COUNT = 15
 MAX_HEALTH = 3
 
 def display_get_choice():
@@ -30,16 +30,16 @@ def display_get_choice():
 def process_choice(choice):
     match choice:
         case 1:
-            play(EASY_ENEMY_COUNT)
+            play(EASY_CHARACTER_COUNT)
         case 2:
-            play(AVERAGE_ENEMY_COUNT)
+            play(AVERAGE_CHARACTER_COUNT)
         case 3:
-            play(HARD_ENEMY_COUNT)
+            play(HARD_CHARACTER_COUNT)
         case 4:
             system("cls")
             
-def play(number_of_enemies):
-    enemies_list = random.sample(cowsay.char_names, number_of_enemies)
+def play(number_of_characters):
+    characters_list = random.sample(cowsay.char_names, number_of_characters)
     lives = MAX_HEALTH
     while lives > 0:
         # TODO (Miko): add guessing functionality
