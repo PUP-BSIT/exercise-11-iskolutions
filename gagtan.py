@@ -9,10 +9,10 @@ def display_country_details(country_name):
     print(f"Subregion: {info.get('subregion', 'Unknown')}")
     print(f"Population: {info.get('population', 'Unknown')}")
     print(f"Area: {info.get('area', 'Unknown')} km²")
-    print("Timezones: " +
-          f"{', '.join(info.get('timezones', []))}")
-    
-    
+    print("Timezones: "
+         + ", ".join(info.get("timezones", []))
+)
+
 def country_info_bot():
     print("\nWelcome! I'm CountryInfoBot.")
     print("Type the name of a country to get information about it.")
@@ -26,5 +26,3 @@ def country_info_bot():
             break
 
         display_country_details(user_input)
-
-       
