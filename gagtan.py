@@ -26,6 +26,3 @@ def country_info_bot():
             break
 
         display_country_details(user_input)
-
-
-       
