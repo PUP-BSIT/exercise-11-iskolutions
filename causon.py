@@ -8,6 +8,7 @@ EASY_CHARACTER_COUNT = 5
 AVERAGE_CHARACTER_COUNT = 10
 HARD_CHARACTER_COUNT = 15
 MAX_HEALTH = 3
+MIN_SCORE = 0
 
 def display_get_choice():
     print("=====Cowsay Guessing Game=====")
@@ -41,10 +42,12 @@ def process_choice(choice):
 def play(number_of_characters):
     characters_list = random.sample(cowsay.char_names, number_of_characters)
     lives = MAX_HEALTH
+    score = MIN_SCORE
     while lives > 0:
-        system("cls")
-        guess = display_get_guess(characters_list)
-        
+        if run_round(characters_list, number_of_characters):
+            lives -= 1
+        else:
+            score += 1
 
 def display_get_guess(characters_list):
     for number, character in enumerate(characters_list, 1): 
@@ -58,7 +61,25 @@ def display_get_guess(characters_list):
         system("cls")
         print("Invalid input! Please enter a number.")
         return UNSET_OPTION
+
+def run_round(characters_list, number_of_characters):
+    system("cls")
+    print("Pick who will show up!")
+    character_index = random.randrange(len(characters_list))
+    character = characters_list[character_index]
+    guess = display_get_guess(characters_list)
     
+    if guess > number_of_characters and guess < 1:
+        print("You didn't pick a valid choice, -1 life.")
+        return False
+    elif guess != character_index:
+        cowsay.get_output_string(character, f"Nice try, but I'm {character}.")
+        input("Press Enter to continue.")
+        return False
+    else:
+        cowsay.get_output_string(character, "You got me!")
+        input("Press Enter to continue.")
+        return True
 
 def start():
     choice = UNSET_OPTION
