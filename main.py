@@ -40,7 +40,7 @@ def process_choice(choice):
         case 5:
             gagtan.country_info_bot()
         case 6:
-            pass
+            system("cls")
         case _:
             pass
 
