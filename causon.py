@@ -55,10 +55,8 @@ def display_get_guess(characters_list):
         
     try:
         choice = int(input("Enter your choice: "))
-        system("cls")
         return choice
     except ValueError:
-        system("cls")
         print("Invalid input! Please enter a number.")
         return UNSET_OPTION
 
@@ -73,11 +71,12 @@ def run_round(characters_list, number_of_characters):
         print("You didn't pick a valid choice, -1 life.")
         return False
     elif guess != character_index:
-        cowsay.get_output_string(character, f"Nice try, but I'm {character}.")
+        print(cowsay.get_output_string(character, f"No, I'm {character}."))
         input("Press Enter to continue.")
         return False
     else:
-        cowsay.get_output_string(character, "You got me!")
+        print(f"guess: {guess}, charIndex: {character_index}")
+        print(cowsay.get_output_string(character, "You got me!"))
         input("Press Enter to continue.")
         return True
 
