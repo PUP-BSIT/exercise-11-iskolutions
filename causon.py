@@ -45,9 +45,9 @@ def play(number_of_characters):
     score = MIN_SCORE
     while lives > 0:
         if run_round(characters_list, number_of_characters):
-            lives -= 1
-        else:
             score += 1
+        else:
+            lives -= 1
 
 def display_get_guess(characters_list):
     for number, character in enumerate(characters_list, 1): 
@@ -65,7 +65,7 @@ def run_round(characters_list, number_of_characters):
     print("Pick who will show up!")
     character_index = random.randrange(len(characters_list))
     character = characters_list[character_index]
-    guess = display_get_guess(characters_list)
+    guess = display_get_guess(characters_list) - 1 # to match the index
     
     if guess > number_of_characters and guess < 1:
         print("You didn't pick a valid choice, -1 life.")
