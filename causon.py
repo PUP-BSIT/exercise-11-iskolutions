@@ -42,8 +42,23 @@ def play(number_of_characters):
     characters_list = random.sample(cowsay.char_names, number_of_characters)
     lives = MAX_HEALTH
     while lives > 0:
-        # TODO (Miko): add guessing functionality
-        pass
+        system("cls")
+        guess = display_get_guess(characters_list)
+        
+
+def display_get_guess(characters_list):
+    for number, character in enumerate(characters_list, 1): 
+        print(f"{number}. {character}")
+        
+    try:
+        choice = int(input("Enter your choice: "))
+        system("cls")
+        return choice
+    except ValueError:
+        system("cls")
+        print("Invalid input! Please enter a number.")
+        return UNSET_OPTION
+    
 
 def start():
     choice = UNSET_OPTION
