@@ -8,7 +8,7 @@ EXIT_OPTION = 6
 def display_get_choice():
     print("============Select an Option============")
     print("1. Cowsay (Guessing Game) - Causon")
-    print("2. ")
+    print("2. Emoji (Emotion Identifier) - Franco")
     print("3. ")
     print("4. ")
     print("5. ")
@@ -29,7 +29,7 @@ def process_choice(choice):
         case 1:
             causon.start()
         case 2:
-            pass
+            franco.emotion_identifier()
         case 3:
             pass
         case 4:
