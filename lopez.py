@@ -18,7 +18,7 @@ def display_country_info(country):
     print(f"Numeric code: {country.numeric}")
 
 def country_explorer():
-    print("\nWelcome to the Country Explorer!")
+    print("\nWelcome to the Country-Code Explorer!")
     print("Reference: https://www.iban.com/country-codes")
 
     while True:
