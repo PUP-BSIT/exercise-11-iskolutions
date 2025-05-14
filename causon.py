@@ -43,14 +43,18 @@ def play(number_of_characters):
     characters_list = random.sample(cowsay.char_names, number_of_characters)
     lives = MAX_HEALTH
     score = MIN_SCORE
+    
     while lives > 0:
         system("cls")
         print(f"Lives: {lives}")
         print(f"Score: {score}")
+        
         if run_round(characters_list, number_of_characters):
             score += 1
         else:
             lives -= 1
+    
+    game_over(score)
 
 def display_get_guess(characters_list):
     for number, character in enumerate(characters_list, 1): 
@@ -81,6 +85,12 @@ def run_round(characters_list, number_of_characters):
         print(cowsay.get_output_string(character, "You got me!"))
         input("Press Enter to continue.")
         return True
+
+def game_over(score):
+    system("cls")
+    print("GAME OVER!")
+    print(f"Your score: {score}")
+    input("Press enter to continue.")
 
 def start():
     choice = UNSET_OPTION
