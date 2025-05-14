@@ -38,6 +38,8 @@ def process_choice(choice):
             play(HARD_CHARACTER_COUNT)
         case 4:
             system("cls")
+        case _:
+            print("Invalid Choice.")
             
 def play(number_of_characters):
     characters_list = random.sample(cowsay.char_names, number_of_characters)
