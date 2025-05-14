@@ -39,7 +39,6 @@ def process_choice(choice):
             lopez.country_explorer()
         case 5:
             gagtan.country_info_bot()
-            pass
         case 6:
             pass
         case _:
