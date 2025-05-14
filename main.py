@@ -13,7 +13,7 @@ def display_get_choice():
     print("1. Cowsay (Guessing Game) - Causon")
     print("2. Emoji (Emotion Identifier) - Franco")
     print("3. PyJokes (Chatbot) - Efondo")
-    print("4. PyCountry (Country Explorer) - Lopez")
+    print("4. PyCountry (Country-Code Explorer) - Lopez")
     print("5. CountryInfo (Country Info Bot) - Gagtan")
     print("6. Exit")
     print("========================================")
