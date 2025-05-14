@@ -10,7 +10,7 @@ def display_get_choice():
     print("============Select an Option============")
     print("1. Cowsay (Guessing Game) - Causon")
     print("2. Emoji (Emotion Identifier) - Franco")
-    print("3. ")
+    print("3. PyJokes (Chatbot) - Efondo")
     print("4. ")
     print("5. ")
     print("6. Exit")
@@ -32,7 +32,7 @@ def process_choice(choice):
         case 2:
             franco.emotion_identifier()
         case 3:
-            pass
+            efondo.chat_bot()
         case 4:
             pass
         case 5:
